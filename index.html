@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>P Paribahan</title>
+    <!-- Tailwind and Daisy UI Cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind Customize -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1DD100",
+              secondary: "#030712",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Custom Style -->
+    <style>
+      .font-inter {
+        font-family: "Inter", sans-serif;
+      }
+      .font-raleway {
+        font-family: "Raleway", sans-serif;
+      }
+      .container {
+        width: 100%;
+        max-width: 1170px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav class="container">
+        <div class="navbar bg-base-100">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 font-raleway text-base font-medium text-[#030712B3]"
+              >
+                <li><a>Home</a></li>
+                <li><a>About</a></li>
+                <li><a>Destination</a></li>
+                <li><a>Search</a></li>
+              </ul>
+            </div>
+            <a class="btn btn-ghost text-xl text-secondary">P-Ticket</a>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul
+              class="menu menu-horizontal px-1 font-raleway text-base font-medium text-[#030712B3]"
+            >
+              <li><a>Home</a></li>
+              <li><a>About</a></li>
+              <li><a>Destination</a></li>
+              <li><a>Search</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <a
+              class="btn bg-[#1DD1001A] hover:bg-[#1DD1001A] border border-[#1DD100] hover:border-[#1DD1001A]"
+              ><span class="text-xl font-raleway text-[#1DD100]">Bus</span>
+              <img src="./images/bus-icon.png" alt=""
+            /></a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Banner -->
+      <section class="">
+        <div
+          class="container bg-[url('./images/banner.png')] bg-no-repeat bg-cover bg-center rounded-xl md:rounded-3xl"
+        >
+          <div
+            class="text-center py-4 md:pt-16 md:pb-32 space-y-4 md:space-y-8 px-10 md:px-[240px]"
+          >
+            <h2
+              class="text-white text-2xl md:text-6xl font-raleway font-extrabold"
+            >
+              End-to-End Travel with
+            </h2>
+            <h2
+              class="text-2xl md:text-6xl font-raleway font-extrabold text-[#1DD100]"
+            >
+              P Paribahan
+            </h2>
+            <p class="text-white font-inter">
+              Yes, you can run unit tests and view the results directly within
+              the app. The integrated testing features allow for a streamlined .
+            </p>
+            <button
+              class="btn bg-[#1DD100] hover:bg-[#1DD100] text-black border-[#1DD100] hover:border-[#1DD100] font-raleway text-lg md:text-xl"
+            >
+              Buy Tickets
+            </button>
+          </div>
+        </div>
+        <div
+          class="container mb-8 flex justify-center gap-5 -translate-y-8 z-20 relative"
+        >
+          <div
+            class="p-8 gap-2 items-center border-b-2 border-[#1DD100] rounded-b-3xl hidden md:flex w-[300px]"
+          >
+            <img src="./images/people.png" alt="" />
+            <div>
+              <h2 class="font-inter font-bold text-3xl text-[#030712]">500K</h2>
+              <h5 class="font-inter text-lg text-[#03071299]">
+                Registered users
+              </h5>
+            </div>
+          </div>
+          <div
+            class="p-8 gap-2 items-center border-b-2 border-[#1DD100] rounded-b-3xl hidden md:flex w-[300px]"
+          >
+            <img src="./images/people.png" alt="" />
+            <div>
+              <h2 class="font-inter font-bold text-3xl text-[#030712]">500K</h2>
+              <h5 class="font-inter text-lg text-[#03071299]">
+                Registered users
+              </h5>
+            </div>
+          </div>
+          <div
+            class="p-8 gap-2 items-center border-b-2 border-[#1DD100] rounded-b-3xl hidden md:flex w-[300px]"
+          >
+            <img src="./images/people.png" alt="" />
+            <div>
+              <h2 class="font-inter font-bold text-3xl text-[#030712]">500K</h2>
+              <h5 class="font-inter text-lg text-[#03071299]">
+                Registered users
+              </h5>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+    <main>
+      <!-- Best Offer Section -->
+      <section class="container my-[120px]">
+        <div class="mb-11 text-center">
+          <h2
+            class="text-[#030712] font-raleway text-2xl md:text-4xl font-bold"
+          >
+            Best offers for you
+          </h2>
+        </div>
+        <div class="flex flex-col md:gap-0 gap-2 justify-between md:flex-row">
+          <div
+            class="w-full md:w-[49%] flex justify-center items-center bg-yellow-500 rounded-xl p-6 truncate relative"
+          >
+            <div
+              class="hidden md:inline-block w-10 h-10 bg-white rounded-full absolute lg:-top-5 md:-top-5 lg:left-[56%] md:left-[54%]"
+            ></div>
+            <div class="flex-1 space-y-1">
+              <h2
+                class="font-inter text-2xl lg:text-4xl text-[#030712CC] font-black"
+              >
+                15% OFF
+              </h2>
+              <h5
+                class="font-inter text-sm lg:text-lg text-[#030712CC] font-black"
+              >
+                on your next purchase
+              </h5>
+              <p
+                class="text-xs lg:text-base font-inter font-medium text-[#03071280]"
+              >
+                use by January 2024
+              </p>
+            </div>
+            <div class="w-2/5 border-s-2 border-dashed text-center space-y-1">
+              <h2 class="text-xl lg:text-3xl font-raleway font-bold">NEW15</h2>
+              <p
+                class="text-xs lg:text-base font-inter font-medium text-[#03071280]"
+              >
+                Coupon Code
+              </p>
+            </div>
+
+            <div
+              class="hidden md:inline-block w-10 h-10 bg-white rounded-full absolute lg:-bottom-5 lg:left-[56%] md:-bottom-5 md:left-[54%]"
+            ></div>
+          </div>
+
+          <div
+            class="w-full md:w-[49%] flex justify-center items-center bg-yellow-500 rounded-xl p-6 truncate relative"
+          >
+            <div
+              class="hidden md:inline-block w-10 h-10 bg-white rounded-full absolute lg:-top-5 md:-top-5 lg:left-[56%] md:left-[54%]"
+            ></div>
+            <div class="flex-1 space-y-1">
+              <h2
+                class="font-inter text-2xl lg:text-4xl text-[#030712CC] font-black"
+              >
+                15% OFF
+              </h2>
+              <h5
+                class="font-inter text-sm lg:text-lg text-[#030712CC] font-black"
+              >
+                on your next purchase
+              </h5>
+              <p
+                class="text-xs lg:text-base font-inter font-medium text-[#03071280]"
+              >
+                use by January 2024
+              </p>
+            </div>
+            <div class="w-2/5 border-s-2 border-dashed text-center space-y-1">
+              <h2 class="text-xl lg:text-3xl font-raleway font-bold">NEW15</h2>
+              <p
+                class="text-xs lg:text-base font-inter font-medium text-[#03071280]"
+              >
+                Coupon Code
+              </p>
+            </div>
+
+            <div
+              class="hidden md:inline-block w-10 h-10 bg-white rounded-full absolute lg:-bottom-5 lg:left-[56%] md:-bottom-5 md:left-[54%]"
+            ></div>
+          </div>
+        </div>
+        <div class="text-center mt-14">
+          <button
+            class="btn border border-[#1DD100] text-[#1DD100] hover:border-[#1DD100] hover:bg-[#1DD1001A]"
+          >
+            See All Offers
+          </button>
+        </div>
+      </section>
+
+      <!-- P.H Paribahan -->
+      <section class="border-t-2 rounded-3xl border-[#1DD100] bg-[#F7F8F8]">
+        <div class="container pt-[120px]">
+          <div class="mb-10 text-center max-w-[700px] mx-auto">
+            <h2
+              class="text-[#030712] font-raleway text-2xl md:text-4xl font-bold"
+            >
+              P.H Paribahan
+            </h2>
+            <p class="text-[#03071299] font-inter text-base md:text-lg mt-6">
+              Yes, you can run unit tests and view the results directly within
+              the app. The integrated testing features allow for a streamlined .
+            </p>
+          </div>
+        </div>
+
+        <!-- Poribahan Info -->
+        <div class="container">
+          <div
+            class="bg-white rounded-2xl p-3 md:p-16 flex md:justify-between items-center lg:flex-row flex-col truncate"
+          >
+            <!-- Left Info-->
+            <div
+              class="w-full lg:w-[80%] lg:pr-28 border-none md:border-r-2 border-[#1DD100] lg:border-dashed space-y-3 relative"
+            >
+              <div
+                class="hidden md:flex bg-[#F7F8F8] w-12 h-12 rounded-full absolute -right-[3%] -top-[22%]"
+              ></div>
+              <div
+                class="flex md:flex-row flex-col justify-center md:justify-between items-center gap-3 md:gap-0"
+              >
+                <div class="flex md:flex-row flex-col gap-3 items-center">
+                  <img
+                    src="./images/bus-logo.png"
+                    alt=""
+                    class="w-12 md:w-16 h-8 md:h-12"
+                  />
+                  <div class="space-y-3">
+                    <h2
+                      class="font-raleway font-bold text-2xl md:text-3xl text-[#030712]"
+                    >
+                      Greenline Paribahan
+                    </h2>
+                    <h6
+                      class="text-[#03071299] font-inter text-base md:text-lg"
+                    >
+                      Coach-009-WEB ! AC_Business
+                    </h6>
+                  </div>
+                </div>
+                <button
+                  class="btn bg-[#1DD1001A] hover:bg-[#1DD1001A] border-none font-inter text-base md:text-lg text-[#1DD100]"
+                >
+                  <img src="./images/seat-green.png" alt="" />
+                  <span>40 Seats left</span>
+                </button>
+              </div>
+
+              <div class="bg-[#F7F8F8] rounded-2xl p-6">
+                <div
+                  class="border-b-2 border-[#03071233] border-spacing-4 border-dashed py-6 flex justify-between items-center"
+                >
+                  <h2
+                    class="text-[#03071299] font-raleway text-base md:text-lg font-semibold"
+                  >
+                    Route
+                  </h2>
+                  <h3
+                    class="text-[#030712] font-raleway text-base md:text-lg font-semibold"
+                  >
+                    Dhaka - Sylhet
+                  </h3>
+                </div>
+                <div
+                  class="border-b-2 border-[#03071233] border-spacing-4 border-dashed py-6 flex justify-between items-center"
+                >
+                  <h2
+                    class="text-[#03071299] font-raleway text-base md:text-lg font-semibold"
+                  >
+                    Departure Time
+                  </h2>
+                  <h3
+                    class="text-[#030712] font-raleway text-base md:text-lg font-semibold"
+                  >
+                    9:00 PM
+                  </h3>
+                </div>
+                <div
+                  class="py-6 flex lg:justify-between justify-center gap-6 lg:gap-0 items-center flex-wrap"
+                >
+                  <button
+                    class="font-inter text-base font-medium btn bg-[#0307120D] hover:bg-[#1DD100] hover:text-white border-none text-[#030712CC]"
+                  >
+                    Boarding Point - Laxmipur
+                  </button>
+                  <button
+                    class="font-inter text-base font-medium btn bg-[#0307120D] hover:bg-[#1DD100] hover:text-white border-none text-[#030712CC]"
+                  >
+                    Dropping Point - Bogura
+                  </button>
+                  <button
+                    class="font-inter text-base font-medium btn bg-[#0307120D] border-none text-[#030712CC] hover:bg-[#1DD100] hover:text-white"
+                  >
+                    Est. Time - 11 Hour
+                  </button>
+                </div>
+              </div>
+              <div
+                class="hidden md:flex bg-[#F7F8F8] w-12 h-12 rounded-full absolute -right-[3%] -bottom-[22%]"
+              ></div>
+            </div>
+            <!-- Right Info -->
+            <div
+              class="w-full lg:w-[18%] flex flex-col justify-center items-center"
+            >
+              <img src="./images/fare.png" alt="" />
+              <h2
+                class="font-raleway font-bold text-2xl md:text-3xl text-[#030712]"
+              >
+                550 Taka
+              </h2>
+              <p
+                class="text-[#03071299] font-raleway text-base md:text-lg font-semibold"
+              >
+                Per Seat
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Poribahan Info -->
+        <div class="container mt-8">
+          <div class="bg-white rounded-2xl p-3 md:p-16">
+            <!-- Left Info-->
+            <div></div>
+            <!-- Right Info -->
+            <div></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>
