@@ -131,3 +131,8 @@ document.getElementById("nextBtn").addEventListener("click", function (e) {
   e.preventDefault();
   my_modal_2.showModal();
 });
+
+// Reload Page
+document.getElementById("modalContinue").addEventListener("click", function () {
+  window.location.reload();
+});
