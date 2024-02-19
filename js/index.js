@@ -126,7 +126,8 @@ document.getElementById("user-number").addEventListener("input", function (e) {
 });
 
 //  Next Step
-let nextBtn = elementGetById("nextBtn");
-nextBtn.addEventListener("click", function () {
-  document.getElementById("my_modal_7").showModal();
+
+document.getElementById("nextBtn").addEventListener("click", function (e) {
+  e.preventDefault();
+  my_modal_2.showModal();
 });

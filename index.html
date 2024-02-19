@@ -908,14 +908,43 @@
       <!-- The button to open modal -->
 
       <!-- Put this part before tag -->
-      <input type="checkbox" id="my_modal_7" class="modal-toggle" />
-      <div class="modal" role="dialog">
-        <div class="modal-box">
-          <h3 class="text-lg font-bold">Hello!</h3>
-          <p class="py-4">This modal works with a hidden checkbox!</p>
+      <dialog id="my_modal_2" class="modal">
+        <div class="modal-box text-center space-y-3">
+          <img
+            src="./images/success.png"
+            class="md:w-20 w-10 h-10 md:h-20 mx-auto"
+            alt=""
+          />
+          <h2
+            class="text-base md:text-2xl font-raleway font-bold text-[#27AE60]"
+          >
+            SUCCESS
+          </h2>
+
+          <div>
+            <p
+              class="py-4 text-sm md:text-lg font-raleway font-bold text-[#4A4A4A]"
+            >
+              Thank you for Booking Our Bus Seats. We are working hard to find
+              the best service and deals for you.
+            </p>
+            <p
+              class="font-inter font-light text-xs md:text-base text-[#4A4A4A]"
+            >
+              Shortly you will find a confirmation in your email.
+            </p>
+          </div>
+
+          <button
+            class="bg-[#27AE60] md:py-4 py-2 px-10 md:px-20 rounded-full font-semibold text-base md:text-lg text-white outline-none"
+          >
+            Continue
+          </button>
         </div>
-        <label class="modal-backdrop" for="my_modal_7">Close</label>
-      </div>
+        <form method="dialog" class="modal-backdrop">
+          <button>close</button>
+        </form>
+      </dialog>
     </main>
     <!-- Footer -->
     <footer class="bg-[#030712] py-28">
