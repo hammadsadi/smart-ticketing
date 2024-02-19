@@ -1,4 +1,5 @@
 //  Booking Seat
+let allSeats = [];
 let seatAreas = document.getElementsByClassName("bus-Seats ");
 for (let seatArea of seatAreas) {
   let seatBtn = seatArea.childNodes[1];
@@ -7,9 +8,14 @@ for (let seatArea of seatAreas) {
 
     //  Add To Seat List
     let addedSeat = elementGetByIdAndInnerTextReturnToNumber("addedSeat");
+
     if (addedSeat == 4) {
       return alert("Sorry You Cannot Added More Seat");
+    } else if (allSeats.includes(e.target.innerText)) {
+      return alert("Already Selected");
     }
+    // Push an Array
+    allSeats.push(e.target.innerText);
     elementGetByIdAndSetValue("addedSeat", addedSeat + 1);
 
     //  Availabel Total Seat
@@ -43,26 +49,20 @@ for (let seatArea of seatAreas) {
     // Set Grand Total
     let grandTotal = elementGetByIdAndInnerTextReturnToNumber("total-grand");
     elementGetByIdAndSetValue("total-grand", grandTotal + 550);
-  });
-}
 
-//  Validate Cupon Button
-let cuponFiled = document
-  .getElementById("cuponFiled")
-  .addEventListener("input", function (e) {
-    let cpnVal = e.target.value;
-    // let cuponValue = cpnVal.split(" ").join("").toUpperCase();
-    if (cpnVal == "Couple 20" || cpnVal == "NEW15") {
+    // Validate Cupon Filed
+    let totaSeats = elementGetByIdAndInnerTextReturnToNumber("addedSeat");
+    let cpnFiled = document.getElementById("cuponFiled");
+    console.log(totaSeats);
+    if (totaSeats == 4) {
       let cuponBtn = elementGetById("cuponBtn");
       cuponBtn.removeAttribute("disabled");
       cuponBtn.classList.remove("bg-[#1cd10056]");
       cuponBtn.style.backgroundColor = "#1DD100";
-    } else {
-      let cuponBtn = elementGetById("cuponBtn");
-      cuponBtn.setAttribute("disabled", true);
-      cuponBtn.style.backgroundColor = "#1cd10056";
+      cpnFiled.removeAttribute("disabled");
     }
   });
+}
 
 //  Discount
 let cuponBtn = elementGetById("cuponBtn");
@@ -70,7 +70,6 @@ cuponBtn.addEventListener("click", function () {
   //  Get Cupon Value
   let cpnFiled = document.getElementById("cuponFiled");
   let cuponFiled = cpnFiled.value;
-  // let cuponValue = cuponFiled.split(" ").join("").toUpperCase();
 
   //    Check Cupon
   if (cuponFiled == "Couple 20") {
@@ -78,29 +77,42 @@ cuponBtn.addEventListener("click", function () {
     let totalGrand = elementGetByIdAndInnerTextReturnToNumber("total-grand");
     let discount = (totalGrand * 20) / 100;
     let discountTotal = totalGrand - discount;
+    //  Show Discount Price
+    let discountContainer = elementGetById("discountContainer");
+    let h2 = document.createElement("h2");
+    h2.innerText = "Discount Price";
+    discountContainer.appendChild(h2);
+    let h3 = document.createElement("h2");
+    h3.innerText = discount + " " + "BDT";
+    discountContainer.appendChild(h3);
     elementGetByIdAndSetValue("total-grand", discountTotal);
+
     // Disabled Apply Button
     let cuponBtn = elementGetById("cuponBtn");
-    cuponBtn.setAttribute("disabled", true);
-    cuponBtn.style.backgroundColor = "#1cd10056";
-
+    cuponBtn.classList.add("hidden");
     // Disabled Input Cupon Filed
-    cpnFiled.value = "";
-    cpnFiled.setAttribute("disabled", true);
+    cpnFiled.classList.add("hidden");
   } else if (cuponFiled == "NEW15") {
     // Calculate Discount
     let totalGrand = elementGetByIdAndInnerTextReturnToNumber("total-grand");
     let discount = (totalGrand * 15) / 100;
-    console.log("Discount New", discount);
     let discountTotal = totalGrand - discount;
+    //  Show Discount Price
+    let discountContainer = elementGetById("discountContainer");
+    let h2 = document.createElement("h2");
+    h2.innerText = "Discount Price";
+    discountContainer.appendChild(h2);
+    let h3 = document.createElement("h2");
+    h3.innerText = discount + " " + "BDT";
+    discountContainer.appendChild(h3);
     elementGetByIdAndSetValue("total-grand", discountTotal);
     // Disabled Apply Button
     let cuponBtn = elementGetById("cuponBtn");
-    cuponBtn.setAttribute("disabled", true);
-    cuponBtn.style.backgroundColor = "#1cd10056";
+    cuponBtn.classList.add("hidden");
     // Disabled Input Cupon Filed
-    cpnFiled.value = "";
-    cpnFiled.setAttribute("disabled", true);
+    cpnFiled.classList.add("hidden");
+  } else {
+    return alert("Invalid Cupon");
   }
 });
 
@@ -115,7 +127,7 @@ document.getElementById("user-number").addEventListener("input", function (e) {
   let nextBtn = elementGetById("nextBtn");
   let totalBookinSeat = elementGetByIdAndInnerTextReturnToNumber("addedSeat");
   let number = e.target.value;
-  if (number.length > 11 && totalBookinSeat > 0) {
+  if (number.length > 4 && totalBookinSeat > 0) {
     nextBtn.classList.remove("bg-[#1cd10056]");
     nextBtn.classList.add("bg-[#1DD100]");
     nextBtn.removeAttribute("disabled");
